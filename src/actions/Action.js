@@ -1,17 +1,16 @@
-// actions
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';
+export const ADDTASK = "ADDTASK";
+export const EDITTASK = "EDITTASK";
+export const DELETETASK = "DELETETASK";
 // action creater
 
-export function incrementCount() {
-  return dispatch => {
-    setTimeout(
-      () => { dispatch({ type: INCREMENT }); },
-      2000
-    );
-  };
+export function addTask(payload) {
+  return { type: ADDTASK, payload };
 }
 
-export function decrementCount() {
-  return { type: DECREMENT };
+export function editTask(payload) {
+  return { type: EDITTASK, payload };
+}
+
+export function deleteTask(payload) {
+  return { type: DELETETASK, payload };
 }

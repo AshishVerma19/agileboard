@@ -1,13 +1,11 @@
-import React from 'react';
-import './Header.less';
+import React from "react";
+import { Navbar } from "react-bootstrap";
 
 function Header() {
   return (
-    <header>
-      <nav className="navbar">
-        <span className="navbar-heading">TRACKER</span>
-      </nav>
-    </header>
+    <Navbar bg="primary" variant="dark">
+      <Navbar.Brand href="#home">Agile Board</Navbar.Brand>
+    </Navbar>
   );
 }
 
